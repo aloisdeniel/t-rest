@@ -37,9 +37,7 @@ $ cd ./myapi
 $ t-rest
 ```
 
-A user interface is available (thanks to [Swagger UI](https://github.com/swagger-api/swagger-ui)) at the rout path of the server for trying out the api.
-
-Then go to 
+A user interface is available (thanks to [Swagger UI](https://github.com/swagger-api/swagger-ui)) at the root path of the server (*default:* `http://localhost:3000/`) for trying out the api.
 
 ## Examples
 
