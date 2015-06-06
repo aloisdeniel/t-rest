@@ -7,7 +7,11 @@
     "email": "alois.deniel@outlook.com",
     "url": "http://aloisdeniel.github.io"
   },
-  "repository": "aloisdeniel/t-rest",
+  "repository": { 
+    "type": "git",
+    "url": "git@github.com:aloisdeniel/t-rest.git"
+  },
+  "homepage": "https://github.com/aloisdeniel/t-rest",
   "license": "MIT",
   "files": [
     "index.js",
