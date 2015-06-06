@@ -1,0 +1,104 @@
+swagger: "2.0"
+schemes:
+  - http
+info:
+  title: "{{{title}}}"
+  description: "{{{description}}}"
+  version: "{{{version}}}"
+paths:
+{{#routes}}
+  {{{path}}}:
+    get:
+      description: Gets all {{{plural}}}.
+      summary: Gets all {{{plural}}}.
+      produces:
+        - application/json
+      responses:
+        "200" : 
+          description: An array of {{{plural}}}.
+          schema:
+            type: 'array'
+            items: 
+              $ref: "#/definitions/{{{single}}}"
+    put:
+      description: Creates a new {{{single}}}.
+      summary: Creates a new {{{single}}}.
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      responses:
+        "200" : 
+          description: The {{{single}}} has been successfuly created.
+  {{{path}}}/generate:
+     get:
+      description: Creates a random number of {{{plural}}}.
+      summary: Creates a random number of {{{plural}}}.
+      parameters:
+        - name: number
+          in: query
+          description: The number of {{{plural}}} to generate.
+          required: false
+          type: string
+      produces:
+        - application/json
+      responses:
+        "200" : 
+          description: An array of {{{plural}}}.
+          schema:
+            type: 'array'
+            items: 
+              $ref: "#/definitions/{{{single}}}"  
+  {{{path}}}/{id}:
+    get:
+      description: Gets an existing {{{single}}} from its identifier.
+      summary: Gets an existing {{{single}}} from its identifier.
+      parameters:
+        - name: id
+          in: path
+          description: The identifier of an existing {{{single}}}.
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        "200" : 
+          description: The {{{single}}} with the given identifier.
+          schema: 
+            $ref: "#/definitions/{{{single}}}"
+    post:
+      description: Updates an existing {{{single}}}.
+      summary: Updates an existing {{{single}}}.
+      parameters:
+        - name: id
+          in: path
+          description: The identifier of an existing {{{single}}}.
+          required: true
+          type: string
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      responses:
+        "200" : 
+          	description: The {{{single}}} has been successfuly updated.
+    delete:
+      description: Deletes an existing {{{single}}}.
+      summary: Deletes an existing {{{single}}}.
+      parameters:
+        - name: id
+          in: path
+          description: The identifier of an existing {{{single}}}.
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        "200" : 
+          description: The {{{single}}} has been successfuly deleted.
+{{/routes}}
+
+definitions:
+{{#routes}}
+  {{{single}}}: {{{schema}}}
+{{/routes}}

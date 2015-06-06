@@ -1,0 +1,15 @@
+title: User
+type: object
+properties:
+  firstname:
+    required: true
+    type: string
+  lastname:
+    required: true
+    type: string
+  email:
+    required: true
+    type: string
+  photo:
+    required: true
+    type: string

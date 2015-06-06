@@ -1,0 +1,17 @@
+title: Task
+type: object
+properties:
+  title:
+    required: true
+    type: string
+  description:
+    required: true
+    type: string
+  created:
+    required: true
+    type: integer
+  done:
+    required: false
+    type:
+      - "boolean"
+      - "null"

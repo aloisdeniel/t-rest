@@ -1,0 +1,5 @@
+port: 3000
+title: Custom generator
+description: A user api with a custom entity generator instead of the default one.
+version: 1.0.1
+root: /api

@@ -1,0 +1,60 @@
+{
+  "name": "t-rest",
+  "version": "0.1.0",
+  "description": "Start a simple rest api for prototyping purposes.",
+  "author": {
+    "name": "Aloïs Deniel",
+    "email": "alois.deniel@outlook.com",
+    "url": "http://aloisdeniel.github.io"
+  },
+  "repository": "aloisdeniel/t-rest",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "t-rest",
+    "test",
+    "fake",
+    "api",
+    "rest",
+    "prototype",
+    "schema"
+  ],
+  "dependencies": {
+    "JSV": "^4.0.2",
+    "body-parser": "^1.12.4",
+    "change-case": "^2.3.0",
+    "colors": "^1.1.0",
+    "commander": "^2.8.1",
+    "config": "^1.13.0",
+    "express": "^4.12.4",
+    "fs-extra": "^0.18.4",
+    "js-yaml": "^3.3.1",
+    "json-schema-faker": "^0.1.10",
+    "lowdb": "^0.7.3",
+    "meow": "^3.1.0",
+    "mustache": "^2.0.0",
+    "pluralize": "^1.1.2",
+    "require-dir": "^0.3.0",
+    "swagger-ui": "^2.1.5-M2",
+    "uuid": "^2.0.1"
+  },
+  "devDependencies": {
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-nodeunit": "^0.4.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-cli": "^1.12.0",
+    "jshint-stylish": "^1.0.1",
+    "load-grunt-tasks": "^3.1.0",
+    "time-grunt": "^1.1.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "bin": {
+    "t-rest": "cli.js"
+  }
+}
