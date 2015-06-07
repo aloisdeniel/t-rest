@@ -1,5 +1,4 @@
-# T-Rest
-
+![Faker.Portable](logos/trest_logo_ld.png)
 
 Start a simple rest api for prototyping purposes.
 
