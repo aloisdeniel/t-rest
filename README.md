@@ -26,7 +26,29 @@ version: 1.0.1
 root: /api
 ```
 
-A file `entity/{route}.yaml` containing the schema of each entity you want to expose must be created.
+A file `entities/{route}.yaml` containing the JSON schema (in YAML language) of each entity you want to expose must be created.
+
+For example, a `entities/tasks.yaml` can be created :
+
+```yaml
+title: Task
+type: object
+properties:
+  title:
+    required: true
+    type: string
+  description:
+    required: true
+    type: string
+  created:
+    required: true
+    type: integer
+  done:
+    required: false
+    type:
+      - "boolean"
+      - "null"
+```
 
 Then simply launch the `t-rest` server in the folder.
 
